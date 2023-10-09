@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  color: rgb(255 255 255 / 90%);
+  background: #606080;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+article {
+  background: #494964;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 10px 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #606080;
+  color: #f8f8f8;
+}
+
+article header.active {
+  background: #5c60ff;
+}
+
+article header.active span {
+  rotate: -180deg;
+}
+
+article h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+article p {
+  margin: 0;
+  padding: 20px 10px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+article span {
+  transition: 0.3s;
+}
+
+article header ~ div {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
